@@ -1,0 +1,6 @@
+# This will show the hadoop distributed file space.
+-- hadoop fs -ls /
+-- hdfs dfs -ls /
+
+#Shows all the files inside the directory or local file system.
+-- ls -l
