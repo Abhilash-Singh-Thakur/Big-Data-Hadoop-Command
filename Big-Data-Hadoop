@@ -1,6 +1,82 @@
+#To check the hadoop version
+-- hadoop version
+
+# To check the all command history.
+-- history
+
 # This will show the hadoop distributed file space.
 -- hadoop fs -ls /
 -- hdfs dfs -ls /
+-- hadoop fs -ls /dir_name
 
 #Shows all the files inside the directory or local file system.
 -- ls -l
+
+# Copy file from local system to hdfs
+   hadoop fs -copyFromLocal source(FIle name)  destination(directory path of hadoop.)
+-- hadoop fs -put file_name /dir_name
+-- hadoop fs -copyFromLocal text.txt /temp
+
+# Delete the file from local system.
+-- rm test.txt
+
+# Give all the permission to the file.
+-- hadoop fs -chmod 777 /test.txt
+
+# Copy file from hadoop to local.
+-- hadoop fs -copyToLocal /test.txt
+
+# For checking the present working directory
+-- pwd
+
+# show all the contents inside of the file in local file system.
+-- cat test.txt
+
+# show all the contents inside of the file in hadoop file system.
+-- hadoop fs -cat /test.txt
+
+# To check the ip address of hadoop system.
+-- ifconfig
+
+# Create the directory inside hadoop system.
+-- hadoop fs -mkdir /new_dir_name
+
+# Get the file from hadoop directory to local system directory.
+-- hadoop fs -get /abhi1/test1.txt
+
+# Move file from local to local working directory.
+  move test.txt file from local system to local system folder.
+-- mv test.txt /home/cloudera/abhi
+
+# move file from hadoop to hadoop folder.
+-- hadoop fs -mv /test.txt /abhi
+# hdfs to local , local to hdfs, local to local., hdfs to hdfs
+  cp = copy, mv = move
+  
+ # Go to root user
+ -- su
+ 
+ # Disk usage
+ -- du
+ -- du -s
+ 
+ # disk usage of perticular directory
+    disk usage of hadoop 
+ -- hadoop fs -du /
+ 
+ # command for show utilised and free disk
+ -- hadoop fs -df /
+    It will showing in percentage.
+ -- df
+ 
+ # It will show the usage of that perticular command.
+ -- hadoop fs -usage mkdir (this for mkdir)
+ -- hadoop fs -usage get (this for get)
+ 
+ # This will give the information about the perticular directory creation
+ -- hadoop fs -stat
+ -- hadoop fs -stat /dir_name
+ 
+ # This command will give the health of the file which is availble.
+ -- hdfs fsck /
+ 
